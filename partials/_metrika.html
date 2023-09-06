@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    var fired = false;
+    
+    window.addEventListener('scroll', () => {
+        if (fired === false) {
+            fired = true;
+            setTimeout(() => {
+                !function (e, t, a, n, g) {
+                    e[n] = e[n] || [], e[n].push({"gtm.start" : (new Date).getTime(), event : "gtm.js"});
+                    var m = t.getElementsByTagName(a)[0], r = t.createElement(a);
+                    r.async = !0, r.defer = !0, r.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PVB2B34", m.parentNode.insertBefore(r, m)
+                }(window, document, "script", "dataLayer")
+
+                (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(12923497, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); 
+            }, 3000)
+        }
+    });
+</script>
