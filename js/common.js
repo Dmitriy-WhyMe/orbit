@@ -14155,7 +14155,7 @@ $(function () {
     }
 
     function changeAvatar(id) {
-        let imagesFolder = "img/quiz-img/avatars/";
+        let imagesFolder = "/img/quiz-img/avatars/";
         let list = {
             1: ["alexander-project", "Александр", "Проектный менеджер"],
             2: [
