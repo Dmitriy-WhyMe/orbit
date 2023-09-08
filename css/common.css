@@ -1204,7 +1204,7 @@ svg {
 
 .dl-menuwrapper .dl-menu.dl-menuopen {
   opacity: 1;
-  min-height: 550px;
+  min-height: calc(100vh - 42px - 38px - 24px - 38px - 30px);
   pointer-events: auto;
   -webkit-transform: translateY(0px);
   transform: translateY(0px); }
