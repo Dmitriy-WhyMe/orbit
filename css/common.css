@@ -1171,7 +1171,7 @@ svg {
           padding: 0;
           gap: 12px;
           box-shadow: none;
-          margin-left: 12px; } }
+          padding-left: 12px; } }
     @media (max-width: 1024px) {
       .nav .nav__item:first-child {
         z-index: 2; } }
