@@ -13028,17 +13028,6 @@ $(function () {
         if($(".call-modal").hasClass("is-display")) {return;}
 
         if(!$(".chat-showed").hasClass("triger")) {
-            if (sessionStorage.getItem("numberViews") !== null && parseInt(sessionStorage.getItem("numberViews")) >= 11) {
-                return;
-            }
-
-            if(sessionStorage.getItem("numberViews") !== undefined) {
-                let test = sessionStorage.getItem("numberViews") + 1;
-                sessionStorage.setItem("numberViews", test);
-            } else {
-                sessionStorage.setItem("numberViews", "0");
-            }       
-            
             $(".js-overlay").addClass("is-display");
             $(".chat-showed").addClass("is-display");
             $(".chat-hidden").removeClass("is-display");
@@ -13047,12 +13036,11 @@ $(function () {
             return;
         }
     }
-
-    let chatShowedTimer = setInterval(chatShowed, 26000);
+    let chatShowedTimer = setInterval(chatShowed, 15000);
     if (!$('.is-display').length) {
         clearInterval(chatShowedTimer);
     }
-    myTimer2 = setInterval(chatShowed, 26000);
+    myTimer2 = setInterval(chatShowed, 15000);
     
     $(".chat-hidden__send, .chat-button").on("click", function () {
         $(".chat-hidden").removeClass("is-display");
@@ -13292,48 +13280,6 @@ $(function () {
             $.post(
               "amo/amo.php", // адрес обработчика
               $("#quiz-apps").serialize(), // отправляемые данные
-            )
-            .done(function (msg) {
-                console.log(msg)
-            })
-            .fail(function (xhr, status, error) {
-                console.log(xhr)
-                console.log(status)
-                console.log(error)
-            });
-        }
-    });
-
-    $("#quiz-without-chat-form [type='submit']").click(function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-
-        let empty = false;
-
-        $("#quiz-without-chat-form .quiz-phone").each(function () {
-            empty = $(this).val().length == 0;
-        });
-
-        if (empty) {
-            $('#quiz-without-chat-form').addClass("unactive");
-        } else {
-            $('#quiz-without-chat-form').removeClass("unactive");
-            showSlide("final");
-
-            let product = document.querySelector(".quiz__result-product");
-            let design = document.querySelector(".quiz__result-design");
-            let integration = document.querySelector(".quiz__result-integration");
-            let time = document.querySelector(".quiz__result-time");
-            let price = document.querySelector(".quiz__result-price");
-            let msg = document.querySelector(".quiz__result-msg");
-
-            msg.value = 'Заявка с квиза без чата Orbitsoft RU | Выберите продукт: ' + product.value + ' Выберите дизайн: ' + design.value + ' Интеграция со сторонними системами: ' + integration.value + ' Планируемый срок: ' + time.value + ' Планируемый бюджет: ' + price.value
-
-            utm($(this))
-
-            $.post(
-              "amo/amo.php", // адрес обработчика
-              $("#quiz-without-chat-form").serialize(), // отправляемые данные
             )
             .done(function (msg) {
                 console.log(msg)
@@ -13643,17 +13589,7 @@ $(function () {
             prevEl: ".products__btn-1.swiper-button-prev",
         },
     });
-    
-    if(document.documentElement.clientWidth < 1279) {
-        const swiperSolutions = new Swiper(".js-horScroll-solutions", {
-            slidesPerView: "auto",
-            navigation: {
-                nextEl: ".solutions__btn.swiper-button-next",
-                prevEl: ".solutions__btn.swiper-button-prev",
-            },
-        });
-    }
-    
+
     const swiperSuccess = new Swiper(".js-horScroll-success", {
         slidesPerView: "auto",
         navigation: {
@@ -13845,11 +13781,6 @@ $(function () {
                     id === "apps"
                 ) {
                     slide.classList.add("modal-open");
-                } else if (
-                    slide.getAttribute("data-step-id") === "305" &&
-                    id === "306"
-                ) {
-                    slide.classList.add("modal-open");
                 }
             });
         });
@@ -13868,9 +13799,6 @@ $(function () {
                 }
                 if (btn.getAttribute("data-next") === "102" || btn.getAttribute("data-next") === "103" || btn.getAttribute("data-next") === "104" || btn.getAttribute("data-next") === "105" || btn.getAttribute("data-next") === "106" || btn.getAttribute("data-next") === "apps") {
                     makeOutputInfoApps();
-                }
-                if (btn.getAttribute("data-next") === "302" || btn.getAttribute("data-next") === "303" || btn.getAttribute("data-next") === "304" || btn.getAttribute("data-next") === "305" || btn.getAttribute("data-next") === "306") {
-                    makeOutputInfoWithoutChat();
                 }
             });
         });
@@ -13936,9 +13864,6 @@ $(function () {
                 }
                 if (btn.getAttribute("data-prev") === "101" || btn.getAttribute("data-prev") === "102" || btn.getAttribute("data-prev") === "103" || btn.getAttribute("data-prev") === "104" || btn.getAttribute("data-prev") === "105" || btn.getAttribute("data-prev") === "106") {
                     makeOutputInfoApps();
-                }
-                if (btn.getAttribute("data-prev") === "301" || btn.getAttribute("data-prev") === "302" || btn.getAttribute("data-prev") === "303" || btn.getAttribute("data-prev") === "304" || btn.getAttribute("data-prev") === "305") {
-                    makeOutputInfoWithoutChat();
                 }
             });
         });
@@ -14155,7 +14080,7 @@ $(function () {
     }
 
     function changeAvatar(id) {
-        let imagesFolder = "/img/quiz-img/avatars/";
+        let imagesFolder = "img/quiz-img/avatars/";
         let list = {
             1: ["alexander-project", "Александр", "Проектный менеджер"],
             2: [
@@ -14200,12 +14125,6 @@ $(function () {
             104: ["alexander-project", "Александр", "Проектный менеджер"],
             105: ["alexander-project", "Александр", "Проектный менеджер"],
             106: ["alexander-project", "Александр", "Проектный менеджер"],
-            301: ["alexander-project", "Александр", "Проектный менеджер"],
-            302: ["alexander-project", "Александр", "Проектный менеджер"],
-            303: ["alexander-project", "Александр", "Проектный менеджер"],
-            304: ["alexander-project", "Александр", "Проектный менеджер"],
-            305: ["alexander-project", "Александр", "Проектный менеджер"],
-            306: ["alexander-project", "Александр", "Проектный менеджер"],
         };
 
         let messages = {
@@ -14225,12 +14144,6 @@ $(function () {
             104: `Приложения, содержащие до&nbsp;10&nbsp;экранов&nbsp;— обычно это&nbsp;простые приложения&nbsp;— как&nbsp;правило, программы, созданные для&nbsp;выполнения одной или&nbsp;нескольких несложных задач. Чем&nbsp;больше уникальных экранов будет в&nbsp;Вашем приложении, тем&nbsp;больше функций и&nbsp;текущих процессов оно&nbsp;будет выполнять. `,
             105: `Какой дизайн вам&nbsp;необходим? Мы&nbsp;разработаем UX / UI мобильного приложения, дизайн-макеты и&nbsp;кликабельный прототип, исходя из&nbsp;ваших пожеланий, или&nbsp;можем предложить стандартные элементы. `,
             106: `У&nbsp;нас&nbsp;есть&nbsp;большой опыт запуска приложений, выберите, какие дополнительные услуги вам&nbsp;понадобятся, и&nbsp;мы&nbsp;с&nbsp;радостью вам&nbsp;поможем. Не&nbsp;знаете что&nbsp;выбрать&nbsp;— выберите «Другое» или&nbsp;напишите в&nbsp;чат&nbsp;и&nbsp;я&nbsp;вас проконсультирую. `,
-            301: ``,
-            302: ``,
-            303: ``,
-            304: ``,
-            305: ``,
-            306: ``,
         };
 
         if (messages[id]) {
@@ -14526,11 +14439,9 @@ $(function () {
             item.addEventListener("click", makeOutputInfoProject);
         });
     }
-    if (document.querySelector(".quiz__step-description-input")) {
-        document
-          .querySelector(".quiz__step-description-input")
-          .addEventListener("blur", makeOutputInfoProject);
-    }
+    document
+        .querySelector(".quiz__step-description-input")
+        .addEventListener("blur", makeOutputInfoProject);
 
     document
         .querySelector(".quiz__step-refresh")
@@ -14553,15 +14464,10 @@ $(function () {
                 formDevelop.reset();
                 $(".quiz__step-next[data-next=developer-2], .quiz__step-next[data-next=developer-3], .quiz__step-next[data-next=developer-4], .quiz__step-next[data-next=final]").addClass("unactive");
             }
-            let formApps = document.getElementById("quiz-apps");
+            let formApps = document.getElementById("quiz-apps")
             if (formApps) {
                 formApps.reset();
                 $(".quiz__step-next[data-next=102], .quiz__step-next[data-next=103], .quiz__step-next[data-next=104], .quiz__step-next[data-next=105], .quiz__step-next[data-next=106], .quiz__step-next[data-next=apps], .quiz__step-next[data-next=final]").addClass("unactive");
-            }
-            let formWithoutChat = document.getElementById("quiz-without-chat-form")
-            if (formWithoutChat) {
-                formWithoutChat.reset();
-                $(".quiz__step-next[data-next=302], .quiz__step-next[data-next=303], .quiz__step-next[data-next=304], .quiz__step-next[data-next=305], .quiz__step-next[data-next=306], .quiz__step-next[data-next=final]").addClass("unactive");
             }
             showSlide(1);
             clearChat();
@@ -14643,35 +14549,6 @@ $(function () {
             type.value = curType.getAttribute("data-value");
         }
         start.value = takeOutStart();
-    }
-
-    function makeOutputInfoWithoutChat() {
-        let product = document.querySelector(".quiz__result-product");
-        let design = document.querySelector(".quiz__result-design");
-        let integration = document.querySelector(".quiz__result-integration");
-        let time = document.querySelector(".quiz__result-time");
-        let price = document.querySelector(".quiz__result-price");
-
-        let curProduct = document.querySelector(".quiz__product .active")
-        let curDesign = document.querySelector(".quiz__design .active")
-        let curTime = document.querySelector(".quiz__time .active")
-        let curPrice = document.querySelector(".quiz__price .active")
-
-        if (curProduct) {
-            product.value = curProduct.getAttribute("data-value");
-        }
-        if (curDesign) {
-            design.value = curDesign.getAttribute("data-value");
-        }
-
-        integration.value = takeOutGet();
-
-        if (curTime) {
-            time.value = curTime.getAttribute("data-value");
-        }
-        if (curPrice) {
-            price.value = curPrice.getAttribute("data-value");
-        }
     }
 
     function takeOutGet() {
@@ -15140,47 +15017,6 @@ if($(window).width() >= 1025){
     });
 }
 
-if($(window).width() <= 1024){
-    $("#firstLink").click(function() {
-        $('#menuSubItem1').hide();
-        $('#menuSubItem2').hide();
-        $('#menuSubItem3').hide();
-    });
-
-    $("#menuItem1").click(function() {
-        $('#menuSubItem2').hide();
-        $('#menuSubItem3').hide();
-        $("#menuSubItem1").fadeToggle(); 
-        
-        if ($('#menuSubItem1').is(':visible'))  {
-            $("#menuItem1 svg").toggleClass('rotate');;
-        } else {
-            $("#menuItem1 svg").toggleClass('rotate-reset');
-        }
-    });
-
-    $("#menuItem2").click(function() {
-        $('#menuSubItem1').hide();
-        $('#menuSubItem3').hide();
-        $("#menuSubItem2").fadeToggle();
-        if ($('#menuSubItem2').is(':visible'))  {
-            $("#menuItem2 svg").toggleClass('rotate');;
-        } else {
-            $("#menuItem2 svg").toggleClass('rotate-reset');;
-        }
-    });
-    
-    $("#menuItem3").click(function() {
-        $('#menuSubItem1').hide();
-        $('#menuSubItem2').hide();
-        $("#menuSubItem3").fadeToggle();
-        if ($('#menuSubItem3').is(':visible'))  {
-            $("#menuItem3 svg").toggleClass('rotate');;
-        } else {
-            $("#menuItem3 svg").toggleClass('rotate-reset');;
-        } 
-    });
-}
 
 function CallModalOpen() {
     $(".header__item_btn").on("click", function () {
