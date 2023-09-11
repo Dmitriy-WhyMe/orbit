@@ -13810,6 +13810,16 @@ $(function () {
         },
     });
 
+    if(document.documentElement.clientWidth < 1279) {
+        const swiperSolutions = new Swiper(".js-horScroll-solutions", {
+            slidesPerView: "auto",
+            navigation: {
+                nextEl: ".solutions__btn.swiper-button-next",
+                prevEl: ".solutions__btn.swiper-button-prev",
+            },
+        });
+    }
+
     const swiperSuccess = new Swiper(".js-horScroll-success", {
         slidesPerView: "auto",
         navigation: {
