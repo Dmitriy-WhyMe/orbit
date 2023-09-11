@@ -3016,7 +3016,9 @@ All this is done for any sub-level being entered.
   .team__arrow {
     position: absolute;
     right: 20px;
-    top: 88px;
+    top: 45px;
+    bottom: 0;
+    margin: auto;
     width: 60px;
     height: 60px;
     color: #3055D8; }
@@ -10497,6 +10499,155 @@ All this is done for any sub-level being entered.
       background: #FFFFFF;
       border: 1px solid #3055D8; }
 
+.solutions__btn {
+  display: none; }
+  @media (max-width: 1279px) {
+    .solutions__btn {
+      display: -ms-flexbox;
+      display: flex; } }
+
+.solutions__row {
+  position: relative; }
+
+.solutions__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (max-width: 1279px) {
+    .solutions__wrapper {
+      -ms-flex-wrap: initial;
+          flex-wrap: initial;
+      gap: 0; } }
+
+.solutions__card {
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 0px #DBDBDB;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 1279px) {
+    .solutions__card {
+      margin: 20px 10px 20px 12px; } }
+  .solutions__card:hover {
+    opacity: 1; }
+  .solutions__card:first-child {
+    max-width: 100%;
+    width: 100%;
+    background: #3055D8;
+    gap: 15px;
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    -ms-flex-align: center;
+        align-items: center; }
+    @media (max-width: 1279px) {
+      .solutions__card:first-child {
+        margin-left: 0;
+        max-width: 280px;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px; } }
+    .solutions__card:first-child .solutions__text {
+      max-width: 300px; }
+      .solutions__card:first-child .solutions__text h3 {
+        color: #FFF;
+        font-size: 64px;
+        font-weight: 600;
+        margin-bottom: 20px; }
+        @media (max-width: 1279px) {
+          .solutions__card:first-child .solutions__text h3 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px; } }
+      .solutions__card:first-child .solutions__text p {
+        color: #FFF;
+        text-align: center;
+        font-family: TT Hoves;
+        font-size: 20px;
+        font-weight: 500; }
+        @media (max-width: 1279px) {
+          .solutions__card:first-child .solutions__text p {
+            font-size: 16px; } }
+  .solutions__card:nth-child(5) {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 20px;
+    background: #3055D8;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    max-width: 66%;
+    width: 100%; }
+    @media (max-width: 1279px) {
+      .solutions__card:nth-child(5) {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 280px;
+        padding-bottom: 20px;
+        padding-top: 20px; } }
+    .solutions__card:nth-child(5) h3 {
+      color: #FFF;
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      max-width: 520px; }
+      @media (max-width: 1279px) {
+        .solutions__card:nth-child(5) h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+          text-align: center; } }
+    .solutions__card:nth-child(5) p {
+      max-width: 596px;
+      color: #FFF;
+      text-align: center;
+      font-family: TT Hoves;
+      font-size: 20px;
+      font-weight: 500; }
+      @media (max-width: 1279px) {
+        .solutions__card:nth-child(5) p {
+          font-size: 16px; } }
+  .solutions__card:nth-child(2), .solutions__card:nth-child(3), .solutions__card:nth-child(4), .solutions__card:nth-child(6) {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    gap: 25px;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #394750;
+    max-width: calc(33% - 12px);
+    width: 100%; }
+    @media (max-width: 1279px) {
+      .solutions__card:nth-child(2), .solutions__card:nth-child(3), .solutions__card:nth-child(4), .solutions__card:nth-child(6) {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 280px;
+        padding-top: 20px;
+        padding-bottom: 20px; } }
+    .solutions__card:nth-child(2) img, .solutions__card:nth-child(3) img, .solutions__card:nth-child(4) img, .solutions__card:nth-child(6) img {
+      border-radius: 10px; }
+    .solutions__card:nth-child(2) .solutions__text, .solutions__card:nth-child(3) .solutions__text, .solutions__card:nth-child(4) .solutions__text, .solutions__card:nth-child(6) .solutions__text {
+      max-width: 224px; }
+      .solutions__card:nth-child(2) .solutions__text h3, .solutions__card:nth-child(3) .solutions__text h3, .solutions__card:nth-child(4) .solutions__text h3, .solutions__card:nth-child(6) .solutions__text h3 {
+        color: #FFF;
+        font-size: 48px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 0px; }
+        @media (max-width: 1279px) {
+          .solutions__card:nth-child(2) .solutions__text h3, .solutions__card:nth-child(3) .solutions__text h3, .solutions__card:nth-child(4) .solutions__text h3, .solutions__card:nth-child(6) .solutions__text h3 {
+            font-size: 24px; } }
+
 .tech__row {
   display: -ms-flexbox;
   display: flex;
@@ -10921,6 +11072,9 @@ All this is done for any sub-level being entered.
 
 .template .products__card:hover p, .template .products__card:focus p {
   color: white; }
+
+.products-check .products__card:focus .products__icon path, .products-check .products__card:hover .products__icon path {
+  fill: none; }
 
 .success {
   -webkit-user-select: none;
