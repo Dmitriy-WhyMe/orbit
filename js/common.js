@@ -15247,9 +15247,8 @@ if($(window).width() >= 1025){
     });
 }
 
-
 function CallModalOpen() {
-    $(".header__item_btn").on("click", function () {
+    $(document).on("click", ".header__item_btn, .footer__info-btn", function(e) {
         $(".js-overlay").addClass("is-display");
         $("#call-modal").addClass("is-display");
         document.body.style.overflow = "hidden";
@@ -15257,6 +15256,7 @@ function CallModalOpen() {
     });
 }
 CallModalOpen();
+
 function CallModalClose() {
     $(".call-modal__close").on("click", function () {
         $(".js-overlay").removeClass("is-display");
@@ -15312,7 +15312,11 @@ function toggleContent() {
 }
 
 $(function() {
-    $( '#dl-menu' ).dlmenu({
+    $( '#dl-menu-header' ).dlmenu({
+        animationClasses : { in : 'dl-animate-in-5', out : 'dl-animate-out-5' }
+    });
+
+    $( '#dl-menu-footer' ).dlmenu({
         animationClasses : { in : 'dl-animate-in-5', out : 'dl-animate-out-5' }
     });
 });
