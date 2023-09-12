@@ -18720,19 +18720,10 @@ textarea.input {
       .footer .section__body {
         -ms-flex-direction: column;
             flex-direction: column;
-        gap: 20px; } }
+        gap: 40px; } }
   .footer__menu {
     max-width: 100%;
     width: 100%; }
-    .footer__menu-mob {
-      display: none;
-      max-width: 100%; }
-      .footer__menu-mob .dl-menu.dl-menuopen {
-        min-height: initial;
-        margin-top: 0; }
-      @media (max-width: 1279px) {
-        .footer__menu-mob {
-          display: block; } }
     .footer__menu-desk {
       display: -ms-flexbox;
       display: flex;
@@ -18741,11 +18732,16 @@ textarea.input {
       gap: 36px; }
       @media (max-width: 1279px) {
         .footer__menu-desk {
-          display: none; } }
+          gap: 20px; } }
     .footer__menu-row {
       display: -ms-flexbox;
       display: flex;
       gap: 24px; }
+      @media (max-width: 1279px) {
+        .footer__menu-row {
+          -ms-flex-direction: column;
+              flex-direction: column;
+          gap: 20px; } }
     .footer__menu-col {
       display: -ms-flexbox;
       display: flex;
@@ -18754,17 +18750,61 @@ textarea.input {
       gap: 15px;
       max-width: 31%;
       width: 100%; }
+      @media (max-width: 1279px) {
+        .footer__menu-col {
+          max-width: 100%; }
+          .footer__menu-col:hover > a::after, .footer__menu-col:focus-within > a::after {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+            bottom: 3px;
+            transition: all .6s ease; }
+          .footer__menu-col:hover > ul, .footer__menu-col:focus-within > ul {
+            -webkit-animation: opacity .6s forwards;
+                    animation: opacity .6s forwards;
+            display: -ms-flexbox;
+            display: flex;
+            opacity: 1; } }
+      .footer__menu-col > a {
+        color: #EEF2F5;
+        font-size: 18px;
+        font-weight: 600;
+        position: relative; }
+        @media (max-width: 1279px) {
+          .footer__menu-col > a:hover, .footer__menu-col > a:active, .footer__menu-col > a:focus, .footer__menu-col > a:visited:hover {
+            opacity: 1; }
+          .footer__menu-col > a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 2px;
+            right: 0px;
+            width: 20px;
+            height: 20px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzQ2NDZfNzE5NSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3QgeT0iMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDAgMjQpIiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF80NjQ2XzcxOTUpIj4KPHBhdGggZD0iTTE4IDEwTDEyIDE2TDYgMTBMNy40IDguNkwxMiAxMy4yTDE2LjYgOC42TDE4IDEwWiIgZmlsbD0iI0VFRjJGNSIvPgo8L2c+Cjwvc3ZnPgo=");
+            -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg); } }
+      .footer__menu-col ul {
+        margin: 0;
+        padding: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        gap: 15px; }
+        @media (max-width: 1279px) {
+          .footer__menu-col ul {
+            display: none;
+            margin-top: -4px; } }
       .footer__menu-col li {
         list-style: none;
-        line-height: initial; }
+        line-height: initial;
+        margin: 0; }
         .footer__menu-col li a {
           color: rgba(238, 242, 245, 0.6);
           font-size: 14px;
           font-weight: 400; }
-        .footer__menu-col li:first-child a {
-          color: #EEF2F5;
-          font-size: 18px;
-          font-weight: 600; }
   .footer__logo {
     max-width: 18.65%;
     width: 100%; }
@@ -18787,7 +18827,9 @@ textarea.input {
         max-width: 100%;
         -ms-flex-align: center;
             align-items: center;
-        gap: 16px; } }
+        gap: 16px;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; } }
     .footer__info-social {
       display: -ms-flexbox;
       display: flex;
@@ -18810,7 +18852,10 @@ textarea.input {
       @media (max-width: 1279px) {
         .footer__info-wrapper {
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+          gap: 8px; } }
       .footer__info-wrapper a {
         display: block;
         font-size: 16px;
