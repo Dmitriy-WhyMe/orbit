@@ -10410,9 +10410,265 @@ All this is done for any sub-level being entered.
         bottom: 158px;
         right: 13px; } }
     @media (max-width: 1024px) {
+      .projects .b49 .projects__text h3 {
+        max-width: 225px; }
       .projects .b49 .projects__decor *:not(.projects__decor-item-mobile) {
         display: none; }
       .projects .b49 .projects__decor-item-mobile {
+        display: block; } }
+  .projects .b50 {
+    background: #AEDEDE;
+    transition: all 1s ease; }
+    .projects .b50 .projects__text {
+      color: #232323; }
+    .projects .b50 .projects__decor-item-1 {
+      left: 24px;
+      top: 44px;
+      width: 50.026px;
+      height: 66.592px; }
+    .projects .b50 .projects__decor-item-2 {
+      width: 30.614px;
+      height: 22.632px;
+      top: 21px;
+      left: 83px; }
+    .projects .b50 .projects__decor-item-3 {
+      top: 18px;
+      right: 41px;
+      z-index: 2; }
+    .projects .b50 .projects__decor-item-4 {
+      width: 32px;
+      height: 28px;
+      top: 13px;
+      right: 43px; }
+      .projects .b50 .projects__decor-item-4 path {
+        transition: all 1s ease; }
+    .projects .b50 .projects__decor-item-5 {
+      width: 16px;
+      height: 13px;
+      top: 38px;
+      right: 19px; }
+      .projects .b50 .projects__decor-item-5 path {
+        transition: all 1s ease; }
+    .projects .b50 .projects__decor-item-6 {
+      left: 13px;
+      bottom: 84px;
+      z-index: 2; }
+    .projects .b50 .projects__decor-item-7 {
+      width: 40px;
+      height: 37px;
+      bottom: 73px;
+      right: 105px; }
+    .projects .b50 .projects__decor-item-8 {
+      width: 55px;
+      height: 55px;
+      right: 8px;
+      bottom: 100px;
+      z-index: 2; }
+    .projects .b50 .projects__decor-item-9 {
+      width: 47px;
+      height: 47px;
+      right: 14px;
+      bottom: 40px; }
+    .projects .b50 .projects__decor-item-10 {
+      top: 131px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      border: 1px solid white;
+      border-radius: 7px;
+      padding: 5px; }
+    .projects .b50 .projects__decor-item-11 {
+      width: 81.5px;
+      height: 55.5px;
+      top: 31px;
+      left: 80px;
+      z-index: 2;
+      opacity: 0; }
+    .projects .b50 .projects__decor-item-mobile {
+      display: none;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    @media (min-width: 1024px) {
+      .projects .b50:hover {
+        background: #0E3030; }
+        .projects .b50:hover .projects__text {
+          color: white; }
+        .projects .b50:hover .projects__decor-item-1 {
+          width: 38.909px;
+          height: 51.794px;
+          top: 13px;
+          left: -3px; }
+        .projects .b50:hover .projects__decor-item-2 {
+          top: 50px;
+          opacity: 0; }
+        .projects .b50:hover .projects__decor-item-3 {
+          right: 121px; }
+        .projects .b50:hover .projects__decor-item-4 {
+          top: -6px;
+          right: 105px; }
+          .projects .b50:hover .projects__decor-item-4 path {
+            fill: white; }
+        .projects .b50:hover .projects__decor-item-5 {
+          top: 22px;
+          right: 78px; }
+          .projects .b50:hover .projects__decor-item-5 path {
+            fill: white; }
+        .projects .b50:hover .projects__decor-item-9 {
+          width: 60px;
+          right: 5px;
+          bottom: 32px;
+          height: 60px;
+          -webkit-transform: rotate(20deg);
+                  transform: rotate(20deg); }
+          .projects .b50:hover .projects__decor-item-9 g path {
+            fill: white; }
+        .projects .b50:hover .projects__decor-item-11 {
+          left: 0;
+          opacity: 1; } }
+    @media (max-width: 1024px) {
+      .projects .b50 .projects__decor *:not(.projects__decor-item-mobile) {
+        display: none; }
+      .projects .b50 .projects__decor-item-mobile {
+        display: block; } }
+  .projects .b51 {
+    background: #BAEBFF;
+    transition: all 1s ease;
+    overflow: hidden; }
+    .projects .b51 .projects__text {
+      color: #232323; }
+    .projects .b51 .projects__decor-item-1 {
+      left: -19px;
+      top: 25px;
+      width: 104px;
+      height: 78px; }
+    .projects .b51 .projects__decor-item-2 {
+      top: 5px;
+      left: 97px;
+      width: 40px;
+      height: 40px; }
+    .projects .b51 .projects__decor-item-3 {
+      top: 11px;
+      right: 63px;
+      width: 88px;
+      height: 30px; }
+    .projects .b51 .projects__decor-item-4 {
+      top: 49px;
+      right: 20px; }
+    .projects .b51 .projects__decor-item-5 {
+      left: 23px;
+      top: 126px;
+      width: 57px;
+      height: 16px; }
+    .projects .b51 .projects__decor-item-6 {
+      right: 30px;
+      top: 114px;
+      width: 43px;
+      height: 12px; }
+    .projects .b51 .projects__decor-item-7 {
+      left: 17px;
+      top: 176px;
+      width: 40px;
+      height: 40px; }
+    .projects .b51 .projects__decor-item-8 {
+      right: -13px;
+      top: 146px;
+      width: 104px;
+      height: 78px; }
+    .projects .b51 .projects__decor-item-9 {
+      left: -16px;
+      bottom: 98px;
+      width: 104px;
+      height: 78px; }
+    .projects .b51 .projects__decor-item-10 {
+      right: 42px;
+      bottom: 132px;
+      width: 40px;
+      height: 40px; }
+    .projects .b51 .projects__decor-item-11 {
+      right: -31px;
+      bottom: 45px;
+      width: 104px;
+      height: 78px; }
+    .projects .b51 .projects__decor-item-12 {
+      top: 41px;
+      margin: 0 auto;
+      left: 0;
+      right: 0; }
+    .projects .b51 .projects__decor-item-mobile {
+      display: none;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    @media (min-width: 1024px) {
+      .projects .b51:hover {
+        overflow: visible; }
+        .projects .b51:hover .projects__decor-item-1 {
+          width: 77px;
+          height: 57px;
+          left: -17px;
+          top: 17px; }
+        .projects .b51:hover .projects__decor-item-2 {
+          width: 55px;
+          height: 55px;
+          top: -10px;
+          left: 92px; }
+        .projects .b51:hover .projects__decor-item-3 {
+          width: 88px;
+          height: 30px;
+          top: 11px;
+          right: 42px; }
+        .projects .b51:hover .projects__decor-item-4 {
+          width: 75px;
+          right: 6px;
+          top: 43px;
+          -webkit-transform: rotate(-6deg);
+                  transform: rotate(-6deg); }
+        .projects .b51:hover .projects__decor-item-5 {
+          width: 57px;
+          height: 16px;
+          left: 44px;
+          z-index: 1; }
+        .projects .b51:hover .projects__decor-item-6 {
+          right: 9px; }
+        .projects .b51:hover .projects__decor-item-7 {
+          width: 55px;
+          height: 55px;
+          left: 20px;
+          top: 163px; }
+        .projects .b51:hover .projects__decor-item-8 {
+          width: 84px;
+          height: 63px;
+          right: -14px;
+          top: 137px; }
+        .projects .b51:hover .projects__decor-item-9 {
+          width: 84px;
+          height: 63px;
+          left: -16px;
+          bottom: 107px; }
+        .projects .b51:hover .projects__decor-item-10 {
+          width: 55px;
+          height: 55px;
+          right: 29px;
+          bottom: 124px; }
+        .projects .b51:hover .projects__decor-item-11 {
+          width: 75px;
+          height: 56.25px;
+          right: -14px;
+          bottom: 60px; }
+        .projects .b51:hover .projects__decor-item-12 {
+          top: 32px;
+          width: 298px;
+          z-index: 2; } }
+    @media (max-width: 1024px) {
+      .projects .b51 .projects__text h3 {
+        max-width: 225px; }
+      .projects .b51 .projects__decor *:not(.projects__decor-item-mobile) {
+        display: none; }
+      .projects .b51 .projects__decor-item-mobile {
         display: block; } }
 
 .project-amo {
